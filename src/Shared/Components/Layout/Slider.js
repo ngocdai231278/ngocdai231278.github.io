@@ -1,18 +1,30 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { CLICK_DOT, NEXT_SLIDE, PREVIOUS_SLIDE } from '../../../Redux-setup/Action-type'
 
 function Slider() {
+    const dispatch = useDispatch()
+
+    const image = useSelector((state) => state.img)
+
+    const clickDot = () => {
+        dispatch({
+            type: CLICK_DOT
+        })
+    }
+
     return (
         <>
-            {/* Slider */}
+            {/* !--Slider	-- */}
             <div id="slide" className="carousel slide" data-ride="carousel">
                 {/* Indicators */}
                 <ul className="carousel-indicators">
-                    <li data-target="#slide" data-slide-to={0} className="active" />
-                    <li data-target="#slide" data-slide-to={1} />
-                    <li data-target="#slide" data-slide-to={2} />
-                    <li data-target="#slide" data-slide-to={3} />
-                    <li data-target="#slide" data-slide-to={4} />
-                    <li data-target="#slide" data-slide-to={5} />
+                    <li onClick={clickDot} className="active" />
+                    <li onClick={clickDot} />
+                    <li onClick={clickDot} />
+                    <li onClick={clickDot} />
+                    <li onClick={clickDot} />
+                    <li onClick={clickDot} />
                 </ul>
                 {/* The slideshow */}
                 <div className="carousel-inner">
@@ -43,7 +55,7 @@ function Slider() {
                     <span className="carousel-control-next-icon" />
                 </a>
             </div>
-            {/* End Slider */}
+            {/*	End Slider	*/}
         </>
     )
 }

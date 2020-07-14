@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Menu() {
+function Menu({ data }) {
+    //  console.log(data)
+
     return (
         <>
             <div className="row">
@@ -8,12 +11,13 @@ function Menu() {
                     <nav>
                         <div id="menu" className="collapse navbar-collapse">
                             <ul>
-                                <li className="menu-item"><a href="#">iPhone</a></li>
-                                <li className="menu-item"><a href="#">Samsung</a></li>
-                                <li className="menu-item"><a href="#">HTC</a></li>
-                                <li className="menu-item"><a href="#">Nokia</a></li>
-                                <li className="menu-item"><a href="#">Sony</a></li>
-                                <li className="menu-item"><a href="#">Blackberry</a></li>
+                                {data.map((item) => {
+                                    return (
+                                        <li className="menu-item" key={item._id}>
+                                            <Link to={`/category-${item._id}`}>{item.name}</Link>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                     </nav>
@@ -21,6 +25,11 @@ function Menu() {
             </div>
         </>
     )
+}
+
+// Truyền props mặc định cho component
+Menu.defaultProps = {
+    data: []
 }
 
 export default Menu
