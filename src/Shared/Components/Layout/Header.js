@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {useHistory} from 'react-router-dom'
 
 function Header() {
+
+    const history = useHistory()
+
+    const [keyword, setKeyWord] = useState("")
+
+    const handleOnChangeInput = (event) => {
+        const { value } = event.target
+        setKeyWord(value)
+    }
+
+    const handleOnSubmit = (event) => {
+        event.preventDefault()
+        history.push(`/search?q=${keyword}`)
+    }
+
     return (
         <>
             {/* Header */}
@@ -11,10 +27,20 @@ function Header() {
                             <h1><a href="#"><img className="img-fluid" src="images/logo.png" /></a></h1>
                         </div>
                         <div id="search" className="col-lg-6 col-md-6 col-sm-12">
-                            <form className="form-inline">
-                                <input className="form-control mt-3" type="search" placeholder="Tìm kiếm"
-                                    aria-label="Search" />
-                                <button className="btn btn-danger mt-3" type="submit">Tìm kiếm</button>
+                            <form className="form-inline" onSubmit={handleOnSubmit}>
+                                <input
+                                    className="form-control mt-3"
+                                    type="search"
+                                    placeholder="Tìm kiếm"
+                                    aria-label="Search"
+                                    value={keyword}
+                                    onChange={handleOnChangeInput}
+                                />
+                                <button
+                                    className="btn btn-danger mt-3"
+                                    type="submit"
+                                >Tìm kiếm
+                                </button>
                             </form>
                         </div>
                         <div id="cart" className="col-lg-3 col-md-3 col-sm-12">
