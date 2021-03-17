@@ -1,0 +1,33 @@
+/* Footer */
+footer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 5px 0;
+  bottom: 0;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--second-color);
+}
+footer .footer-row {
+  display: flex;
+}
+footer .info,
+footer .condition {
+  display: flex;
+  justify-content: center;
+}
+footer .condition a {
+  color: var(--white);
+}
+footer .condition a:hover {
+  text-decoration: none;
+}
+footer .info h6:nth-child(2),
+footer .condition h6:nth-child(2) {
+  padding: 0 5px;
+}
+footer h6 {
+  margin: 0;
+}

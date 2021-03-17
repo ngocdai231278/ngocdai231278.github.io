@@ -1,0 +1,212 @@
+@import "footer.css";
+
+/* Modal */
+.modal {
+  display: none;
+  background-color: transparent;
+}
+.modal.show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-dialog {
+  width: 400px;
+  margin: 0;
+}
+/* End Modal */
+
+/* Main */
+#main {
+  display: flex;
+  overflow: hidden;
+  background-color: var(--white);
+  flex-direction: column;
+}
+.container_fluid {
+  height: 100%;
+}
+
+/* Header */
+.header_bar {
+  background-color: var(--primary-color);
+}
+.header_bar_content {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+.header_bar_content a,
+.header_menu_content a {
+  color: var(--black);
+}
+.header_bar_content a:hover,
+.header_menu_content a:hover {
+  text-decoration: none;
+}
+.header_bar_content h6,
+.header_menu_content h6 {
+  padding: 0 10px;
+}
+.header_menu {
+  padding: 5px 0;
+  background-color: var(--second-color);
+}
+.header_menu .container_fluid {
+  background-color: var(--white);
+}
+.header_menu_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 17px;
+}
+.header_menu_content a {
+  padding: 10px 0;
+}
+.header_menu_content .active {
+  padding: 10px 20px;
+  color: var(--white);
+  background-color: var(--second-color);
+}
+/* End Header */
+
+/* Content */
+.content {
+  display: flex;
+}
+/* Content Left */
+.content_left_banner {
+  position: relative;
+}
+.content_left_banner .cover {
+  position: absolute;
+  bottom: 0;
+  margin: 0px 10px 10px 10px;
+  background: var(--black);
+  color: var(--white);
+}
+.content_left_banner .cover h3 {
+  padding: 5px;
+  font-size: 25px;
+}
+.content_left_title {
+  padding: 30px 0;
+}
+.content_left_title h3 {
+  font-family: var(--second-font);
+  font-weight: bold;
+  padding-bottom: 30px;
+  border-bottom: 2px solid;
+  color: #861202;
+}
+.content_left_form {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.content_left_form form {
+  width: 400px;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+.content_left_form form h5 {
+  padding: 20px 0;
+  font-weight: bold;
+  color: var(--second-color);
+}
+.content_left_form form .form-control {
+  width: 300px;
+  margin: 10px auto;
+}
+.content_left_form form button {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  background-color: var(--second-color);
+  color: var(--white);
+  font-size: 23px;
+  border: 1px solid;
+  border-radius: 20px;
+  outline: none;
+}
+.content_left_comment_item {
+  display: flex;
+  padding-bottom: 30px;
+}
+.content_left_comment_item img {
+  border-radius: 50%;
+}
+.content_left_comment_item_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+.move_form {
+  display: inline;
+  cursor: pointer;
+  color: var(--third-color);
+}
+#footer_popup {
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  text-align: center;
+  background-color: purple;
+  color: white;
+}
+/* End Content Left */
+/* Content Right */
+.content_right_categories {
+  margin-left: 5px;
+  background-color: #f4f4f4;
+}
+.content_right_categories .nav-tabs .nav-link {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--black);
+  text-transform: uppercase;
+  background-color: #dcdcdc;
+}
+.content_right_categories .nav-tabs .nav-link.active {
+  background-color: #f4f4f4;
+}
+.content_right_categories .nav-tabs .nav-link:hover {
+  color: var(--second-color);
+}
+.tab_all a {
+  color: var(--black);
+}
+.tab_all a:hover {
+  text-decoration: none;
+  color: var(--second-color);
+}
+.tab_all h6 {
+  padding-top: 5px;
+  font-size: 14px;
+  color: gray;
+}
+/* End Content Right */
+/* End Content */
+
+/* Media Queries */
+@media (min-width: 1535px) {
+}
+@media (max-width: 1534px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+}
+@media (max-width: 410px) {
+}
+@media (max-width: 359px) and (min-width: 0) {
+}

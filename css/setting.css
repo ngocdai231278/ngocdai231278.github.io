@@ -1,0 +1,95 @@
+@font-face {
+  font-family: sfPro;
+  src: url(./fonts/SFProDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: montserratPegular;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+/* Firefox Bug Fix */
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* Bootstrap Padding Fix */
+[class*="col-"] {
+  padding: 0rem;
+}
+
+/* Body settings */
+:root {
+  --primary-color: #e4e4e4;
+  --second-color: #d40101;
+  --third-color: #1765c9;
+  --white: #ffffff;
+  --black: #000000;
+  --primary-font: "sfPro";
+  --second-font: "montserratPegular";
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  padding-right: 0 !important;
+  font-family: var(--primary-font), sans-serif !important;
+}
+.container_fluid {
+  height: auto;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Custom */
+.custom_button {
+  width: 150px;
+  border-radius: 30px;
+  margin: 10px 5px 60px 5px;
+  padding: 10px 0;
+  color: var(--white);
+  border: none;
+  background: linear-gradient(189.36deg, #25c492 7.46%, #00ab62 97.13%);
+}
+.custom_button:hover,
+.custom_button:active,
+.custom_button:focus {
+  outline: none;
+  opacity: 0.8;
+}
+.custom_row {
+  flex-wrap: nowrap;
+  margin-right: 0;
+  margin-left: 0;
+}
